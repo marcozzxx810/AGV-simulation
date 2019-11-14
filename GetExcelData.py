@@ -4,7 +4,7 @@ import itertools
 from node import *
 
 
-def ExceltoList (str):
+def exceltoList (str):
     from pprint import pprint
     data = pd.read_excel( str, sheet_name='Sheet1' )
     df = pd.DataFrame( data, columns=['Type', 'x-axis', 'y-axis'] )
@@ -18,7 +18,7 @@ def ExceltoList (str):
 
     return nodes_list
 
-def JobGenerator (Carn_list: Carn):
+def jobGenerator (Carn_list: Carn):
     JobList = []
     with open("test.txt",'w',encoding = 'utf-8') as f:
         for i in range( len( Carn_list ) ):
